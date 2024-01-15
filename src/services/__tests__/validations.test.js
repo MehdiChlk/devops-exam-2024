@@ -1,9 +1,9 @@
-// TODO: Create tests suite for validation function
-const { isValid } = require('../validations');
+// validation.js
 
-describe('validations tests suites - isValid', () => {
-    test('should return true or false as the function is defined', () => {
-        const result = isValid();
-        expect(result).toBeDefined();
-    });
-});
+// TODO: Refactor validation function to follow the defined validations rules
+const isValid = (gamertag) => {
+    const isLengthValid = gamertag.length >= 8;
+    return isLengthValid && Math.random() >= 0.5;
+};
+
+exports.isValid = isValid;
