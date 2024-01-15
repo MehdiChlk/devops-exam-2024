@@ -13,16 +13,18 @@ jobs:
 
         steps:
             
-uses: actions/checkout@v3
+    uses: actions/checkout@v3
 name: Use Node.js ${{ matrix.node-version }}
           uses: actions/setup-node@v3
           with:
               node-version: ${{ matrix.node-version }}
               cache: 'npm'
-Node.js — Previous Releases
-Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-[16:44]
-node_modules/*
+            
+            
+              Node.js — Previous Releases
+             Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+          [16:44]
+          node_modules/*
 [16:48]
 name: Github Actions CI
 
@@ -45,10 +47,8 @@ name: Use Node.js ${{ matrix.node-version }}
           with:
               node-version: ${{ matrix.node-version }}
               cache: 'npm'
-name: 'Install dependencies'
+        name: 'Install dependencies'
         run: |
             npm install
-name: 'Checking code'
-
-      run: |
-              npm run prettier
+        name: 'Checking code'
+        run: npm run prettier
